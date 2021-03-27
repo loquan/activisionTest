@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<style> 
+body {
+
+
+  background: url(hero_img_01.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+#centered {
+  margin-top: 350px;
+  color:white;
+  font-size:30px;
+  text-align: center; 
+}
+.centerText
+{
+	text-align: center; 
+}
+#buttonCenter {
+  position: absolute;
+  margin-top:20px;	
+  width: 450px;   
+  color:black;
+  font-size:55px;
+  text-align: center;  
+  font-weight: bold;   
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+</style>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+var x = 0;
+
+
+function background(){
+     var w = window.innerWidth;
+  	 var h = window.innerHeight;
+	 
+	 var Text1="<div class='centerText'>The world's first independent developer and distributor of</div><div class='centerText'> video console games & one of the largets third party</div><div class='centerText'> video game publisher in the world.</div>"
+	 var Text2="<div class='centerText'>The world's first</div><div class='centerText'> independent developer</div><div class='centerText'> and distributor of video</div><div class='centerText'> console games & one of</div><div class='centerText'> the largets third party</div><div class='centerText'> video game publisher</div><div class='centerText'> in the world.</div>"
+	 var myElement = document.getElementById("centered");
+	 var myElement2 = $('#centered')[0];
+	 if(640 <= w)
+	 {
+	     
+		document.body.style.backgroundImage = "url('hero_img_01.jpg')";
+		$('#centered')[0].innerHTML=Text1;
+		//myElement.innerHTML="large";
+	 }
+	 else
+	 {
+	   document.body.style.backgroundImage = "url('Hero_img_mobile_01.jpg')";
+	   $('#centered')[0].innerHTML=Text2;
+	   //myElement.innerHTML="small";
+	 }
+
+
+}
+
+function videoButton(){
+  alert();
+}
+
+$(document).ready(function(){
+	background();
+  $(window).resize(function(){
+    
+	 background();
+		
+  });
+});
+
+
+
+</script>
+</head>
+<body>
+ <div  id="centered" >qqqqqqq </div>
+
+ <div  id="buttonCenter"> 
+	<button onclick="videoButton()">LEARN&nbsp;MORE</button>
+ </div>
+ 	
+ 
+</body>
+</html>
