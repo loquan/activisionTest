@@ -6,11 +6,12 @@
 body {
 
   font-family: Arial, Helvetica, sans-serif;
-  background: url(hero_img_01.jpg) no-repeat center center fixed; 
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background: url(large.png) no-repeat fixed ; 
+  background-position-x: center;
+  background-position-y: 40px;
+ 
+  
+ 
 }
 
 
@@ -24,61 +25,29 @@ body {
 {
 	text-align: center; 
 }
-#buttonCenter {
-  position: absolute;
-  margin-top:20px;	
-  width: 450px;   
-  color:black;
-  font-size:55px;
-  text-align: center;  
-  font-weight: bold;   
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+
+#text1{
+  color:red;
+  font-size:60px;
+   position: relative;
+   left: 30px;
+   top: 275px;
+}
+#text2{
+  color:green;
+  position: relative;
+  font-size:70px;
+  left: 30px;
+  top: 280px;
 }
 
-/* The Modal (background) */
-.modal {
-  display: none; /* Hidden by default */
-  position: fixed; /* Stay in place */
-  z-index: 1; /* Sit on top */
-  padding-top: 100px; /* Location of the box */
-  left: 0;
-  top: 0;
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  overflow: auto; /* Enable scroll if needed */
-  background-color: rgb(0,0,0); /* Fallback color */
-  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
-/* Modal Content */
-.modal-content {
-  background-color: #fefefe;
-  margin: auto;
-  padding: 20px;
-  border: 1px solid #888;
-  width: 80%;
-  height: 80%;
-}
-
-/* The Close Button */
-.close {
-  color: #aaaaaa;
-  float: right;
-  font-size: 28px;
-  font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-  color: #000;
-  text-decoration: none;
-  cursor: pointer;
-}
 </style>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
+<div id=text1>coming soon</div>
+
+<div id=text2><b>instock solution</b></div>
 <script>
 function background(){
      var w = window.innerWidth;
@@ -87,20 +56,39 @@ function background(){
 	 
 	 
 	 
-	 var Text1="<div class='centerText'>The world's first independent developer and distributor of</div><div class='centerText'> video console games & one of the largets third party</div><div class='centerText'> video game publisher in the world.</div>"
-	 var Text2="<div class='centerText'>The world's first</div><div class='centerText'> independent developer</div><div class='centerText'> and distributor of video</div><div class='centerText'> console games & one of</div><div class='centerText'> the largets third party</div><div class='centerText'> video game publisher</div><div class='centerText'> in the world.</div>"
-	 
-	 if(640 <= w)
+	
+	 if(w <=500 )
 	 {
 	     
-		document.body.style.backgroundImage = "url('hero_img_01.jpg')";
-		$('#centered')[0].innerHTML=Text1;
+		document.body.style.backgroundImage = "url('https://bublup-media-production.s3.amazonaws.com/EM19_OwoeLCQyI930n9PUA/images/full_007-im-4b69b763-de22-4f31-aee4-dcb144fad3a0.jpg')";
+		document.getElementById('text1').innerHTML="Mobile";
+		document.getElementById('text1').style.color='blue'
+		document.getElementById('text2').style.color='yellow'
+		document.getElementById('text1').style.fontSize="35px";
+		document.getElementById('text2').style.fontSize="40px";
+	    
+	 }else  if (w <= 1400) 
+	 
+	 {
+	
+	   document.body.style.backgroundImage = "url('https://bublup-media-production.s3.amazonaws.com/bk7xylp1OzdaCyJ1iiTRvA/images/full_007-im-a4ba80cf-1aa0-4653-a521-ba32288f3941.jpg')";
+	   document.getElementById('text1').innerHTML="Tablet";
+	   document.getElementById('text1').style.color='black'
+	   document.getElementById('text2').style.color='white'
+	   document.getElementById('text1').style.fontSize="50px";
+	   document.getElementById('text2').style.fontSize="55px";
 		
+	   
 	 }
 	 else
 	 {
-	   document.body.style.backgroundImage = "url('Hero_img_mobile_01.jpg')";
-	   $('#centered')[0].innerHTML=Text2;
+	   document.body.style.backgroundImage = "url('https://bublup-media-production.s3.amazonaws.com/07WWi7AoUBlgCwM-veqTOw/images/full_007-im-4a1e662d-e020-4f00-b7b9-db09bc6dc7f4.jpg')";
+	   document.getElementById('text1').innerHTML="Desktop";
+	   document.getElementById('text1').style.color='purple'
+	   document.getElementById('text2').style.color='green'
+	   document.getElementById('text1').style.fontSize="60px";
+	   document.getElementById('text2').style.fontSize="65px";
+		
 	   
 	 }
 
@@ -123,11 +111,6 @@ $(document).ready(function(){
 </head>
 <body>
 
- <div  id="centered" >sss </div>
-
- <div  id="buttonCenter"> 
-	<button >LEARN&nbsp;MORE</button>
- </div>
  	
 	
 
@@ -139,47 +122,7 @@ $(document).ready(function(){
 
 
 
-<!-- The Modal -->
-<div id="myModal" class="modal">
 
-  <!-- Modal content -->
-  <div class="modal-content">
-    <span class="close">&times;</span>
-    <iframe width="90%" height="90%"
-	
-		src="https://www.youtube.com/embed/vM-Bja2Gy04">">
-	</iframe>
-  </div>
-
-</div>
-
-<script>
-// Get the modal
-
-var modal = document.getElementById("myModal");
-
-// Get the button that opens the modal
-var btn = document.getElementById("buttonCenter");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal 
-btn.onclick = function() {
-  modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-  modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-}
 
 
 </script>
